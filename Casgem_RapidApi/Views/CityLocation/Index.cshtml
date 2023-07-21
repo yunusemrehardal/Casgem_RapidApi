@@ -1,0 +1,29 @@
+﻿@model List<LocationCityNameViewModel>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+<form method="get">
+
+    <div class="container">
+        <br />
+        <br />
+        <label>Şehrin Adını Giriniz:</label>
+        <input type="text" name="cityname" />
+        <button class="btn btn-outline-warning">Şehir ID Getir</button>
+        <br />
+        <hr />
+        <table class="table table-hover">
+            <tr>
+                <th>ŞehirID</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.dest_id</td>
+                </tr>
+            }
+        </table>
+    </div>
+</form>
